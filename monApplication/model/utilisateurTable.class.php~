@@ -1,0 +1,44 @@
+<?php
+// Inclusion de la classe utilisateur
+require_once "utilisateur.class.php";
+
+class utilisateurTable {
+	
+	//Fonction qui retourne un utilisateur sachant son login et son mot de passe 	
+  public static function getUserByLoginAndPass($login,$pass)
+	{
+  	$em = dbconnection::getInstance()->getEntityManager() ; //connexion 
+
+	$userRepository = $em->getRepository('utilisateur'); //base de données utilisateurs
+	$user = $userRepository->findOneBy(array('identifiant' => $login, 'pass' => $pass)); //récupérer par occurrence dans la table les objets correspond à la valeur $login dans colonne identifiant et $pass dans la colonne pass 
+	
+	//Si l'utilisateur (type objet) n'existe pas alors erreur sql 
+	if ($user == false)
+	{
+		echo 'Erreur sql';
+	}
+	return $user; 
+	}
+	
+	//Fonction qui retourne un utilisateur sachant son id  
+	public static function getUserById($id)
+	{
+  	$em = dbconnection::getInstance()->getEntityManager() ;
+	$userRepository = $em->getRepository('utilisateur');
+	$user = $userRepository->findOneBy(array('id' => $id));	
+	
+	if ($user == false)
+	{
+		echo 'Erreur sql';
+	}
+	return $user; 
+	}
+	
+	
+	public static function getVoyage()
+
+  
+}
+
+
+?>

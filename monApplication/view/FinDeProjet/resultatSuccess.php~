@@ -1,0 +1,29 @@
+<?php
+if ($context->voyageRecherche == null) {
+    echo "Pas de voyage d'après votre recherche";
+} else {
+    $tableHTML = '<br>';
+    $tableHTML .= '<table>
+            <tr>
+              <th>Conducteur</th>
+              <th>Tarif</th>
+              <th>Nombre de places</th>
+              <th>Heure de départ</th>
+              <th>Contraintes</th>
+            </tr>';
+
+    foreach ($context->voyageRecherche as $voyage) {
+        $tableHTML .= "<tr>";
+        $tableHTML .= "<td>" . $voyage->conducteur->nom . " " . $voyage->conducteur->prenom . "</td>";
+        $tableHTML .= "<td>" . $voyage->tarif . "€" . "</td>";
+        $tableHTML .= "<td>" . $voyage->nbplace . "</td>";
+        $tableHTML .= "<td>" . $voyage->heuredepart . "</td>";
+        $tableHTML .= "<td>" . $voyage->contraintes . "</td>";
+        $tableHTML .= "</tr>";
+    }
+
+    $tableHTML .= '</table>';
+
+    echo $tableHTML;
+}
+?>

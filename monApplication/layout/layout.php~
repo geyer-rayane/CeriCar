@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Ton appli !</title>
+  <link rel="stylesheet" type="text/css" href="https://pedago.univ-avignon.fr/~uapv2307467/squelette_L3/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* Styles CSS */
+    body, h1, h2, h3, h4, h5, h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+    .myLink {display: none}
+  </style>
+
+  <!-- Inclusion des scripts JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/fonction.js"></script>
+</head>
+
+<body class="w3-white">
+  <!-- Contenu visible -->
+  <div id="affichageHeader">
+  <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+    <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red" onclick="retourAccueil()">
+      <b><i class="material-symbols-outlined">directions_car</i></b>
+      <span>CERICAR</span>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red" onclick="retourRecherche()">
+      <b><i></i>Recherche</b>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-right" onclick="retourIncription()">
+      <b><i></i>Inscription</b>
+    </a>
+	<a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red w3-right" onclick="retourConnexion()">
+      <b><i></i>Connexion</b>
+    </a>
+  </div>
+  </div>
+
+  <!-- Contenu dynamique -->
+  <h2>  
+  <div id="affichageBandeau">
+  </div>
+  </h2>
+
+  <div id="affichageAccueil"> 
+		<?php
+		$imagePath = 'https://pedago.univ-avignon.fr/~uapv2307467/squelette_L3/images/accueilCERICAR.png';
+		echo '<img src="' . $imagePath . '" alt="Description de l\'image" style="width: 300px; height: 300px;">';
+	?>
+  </div>  
+  
+  <div class="fixerDivFormulaire" id="affichageFormulaire"></div>
+  
+  <div class="fixerDivProfil" id="affichageProfil"></div>
+  
+  <div class="fixerDivFormulaireInscription" id="affichageFormulaireInscription"></div>
+  
+  <div class="fixerDivVoyage" id="affichageVoyage"></div>
+
+  <!-- Contenu PHP -->
+	<div>   
+  <?php if($context->getSessionAttribute('user_id')): ?>
+    <?php echo $context->getSessionAttribute('user_id')." est connecté"; ?>
+  <?php endif; ?>
+	</div>  
+ 
+ 
+
+</body>
+</html>

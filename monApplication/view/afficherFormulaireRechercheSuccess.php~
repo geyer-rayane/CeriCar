@@ -1,0 +1,24 @@
+<?php echo '	
+  <div class="w3-display-left w3-padding w3-col l6 m8">
+    <div class="w3-container w3-red">
+      <h2><i class="fa fa-car w3-margin-right"></i>Ou voyagerez-vous demain ?</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-flag-o"></i> Départ</label>
+            <input class="w3-input w3-border" type="text" placeholder="" id="depart" name="depart">
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-flag-o"></i> Arrivée</label>
+            <input class="w3-input w3-border" type="text" id="arrivee" placeholder="" name="arrivee">
+          </div>
+        </div>
+        
+        <button class="w3-button w3-dark-grey" type="submit" value="Rechercher" onclick="voyageScript()"><i class="fa fa-search w3-margin-right"></i> Rechercher</button>
+    </div>
+  </div>
+  
+  
+';
+?>

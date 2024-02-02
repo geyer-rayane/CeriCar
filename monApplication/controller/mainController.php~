@@ -1,0 +1,57 @@
+<?php
+
+class mainController
+{
+	public static function helloWorld($request,$context)
+	{
+		$context->mavariable="hello world";
+		$context->notification="notification ".$request['action'] ;
+		return context::SUCCESS;
+	}
+
+	public static function index($request,$context)
+	{				
+		$context->notification="notification ".$request['action'] ;
+		return context::SUCCESS;
+
+	}
+
+	public static function superTest($request,$context)
+	{
+		$context->mavariable="superTest ".$request['val1']." ".$request['val2'] ;
+		$context->notification="notification ".$request['action'] ;
+		return context::SUCCESS;
+	}	
+	
+	//Fonction permettant de tester les fonctions de l'étape 2 sur la vue login via loginSuccess.php 
+	public static function login($request,$context)
+	{
+		
+		//Test getUserByLoginAndPass
+		$context->login= utilisateurTable::getUserByLoginAndPass('User1','0bc8658ea4e2f64af9d6890eace91a819f9f2046') ;
+		//Via le loginSuccess.php on affichera le trajet reliant Paris et Lyon et son identifiant  
+		$context->trajet= trajetTable::getTrajet('Paris','Lyon') ;
+		//Test getVoyagesByTrajet. On utilise le trajet précédent 
+		$context->voyageAssocies = voyageTable::getVoyagesByTrajet($context->trajet) ;
+		//Test getReservationByVoyage. On utilise le tableau de voyages précédent en utilisant le premier
+		$context->reservationAssocies = reservationTable::getReservationByVoyage($context->voyageAssocies[0]) ;
+		//Test getUserById 
+		$context->getUserById = utilisateurTable::getUserById(1) ;
+		return context::SUCCESS;
+	}		
+
+
+	//Fonction rechercheVoyage pour définir la vue SUCCESS
+	public static function rechercheVoyage($request,$context)	
+	{	
+	 return context::SUCCESS;
+	}
+	
+	public static function resultat($request,$context)	
+	{
+	 	$context->trajetRecherche = trajetTable::getTrajet($request['aller'], $request['retour']);
+    	$context->voyageRecherche = voyageTable::getVoyagesByTrajet($context->trajetRecherche);
+		return context::SUCCESS;
+	}
+}
+?>

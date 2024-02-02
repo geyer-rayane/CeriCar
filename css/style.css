@@ -1,0 +1,468 @@
+/* Import de Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+/*Body */
+
+  body {
+      background-color: #f0f0f0;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+
+/* Style h */
+    h2 {
+      font-family: 'Nunito', sans-serif;
+      color: #000000; 
+	  font-weight: 700; /* Pour le gras */
+	  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+}
+
+    h3 {
+  font-family: 'Nunito', sans-serif;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding: 10px; /* Ajout de marge interne pour décoller le texte du bord */
+  border: 2px solid #fff; /* Bordure blanche de 2 pixels */
+  border-radius: 8px; /* Bords arrondis pour adoucir l'apparence */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+}
+
+h4 {
+  font-family: 'Nunito', sans-serif;
+  position : relative;
+  color: #000;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Largeur fixe */
+  height: 170px; /* Hauteur fixe */
+}
+
+h4:hover {
+  background: #F0F0F0;
+}
+
+
+h6 {
+  font-family: 'Nunito', sans-serif;
+  color: #000;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Largeur fixe */
+  height: 170px; /* Hauteur fixe */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+    position: fixed;
+  top: 500px; /* Exemple : position fixe à 20px du haut de la fenêtre */
+  left: 500px; /* Exemple : position fixe à 20px de la gauche de la fenêtre */
+  /* Ajoutez d'autres propriétés si nécessaire */
+}
+
+h6:hover {
+  background: #F0F0F0;
+}
+
+
+
+
+    
+/* Page */	
+    #page {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: left;
+    }
+
+    #flash_error {
+      background-color: #e74c3c;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    #page_maincontent {
+      margin-top: 20px;
+    }
+    
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 20px auto;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            }
+
+            th, td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #3498db;
+                color: white;
+            }
+
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+
+
+
+
+
+
+
+/* Fixer les principales div */
+
+.copieW3 {
+    position: absolute;
+    top: 15% !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*
+.copieW3 {
+    top: 17% !important;
+     left: 25% !important;
+}
+*/
+
+.copieW33 {
+    position: absolute;
+    top: 15% !important;
+    left: 25% !important;
+}
+
+.copieW333 {
+    position: absolute;
+    top: 15% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+}
+
+/*
+.fixerDivFormulaire {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* Hauteur de la vue du navigateur pour centrer verticalement */
+
+}
+*/
+
+.fixerDivFormulaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh; /* Hauteur minimale pour r�server l'espace */
+  visibility: hidden; /* Cacher la div visuellement si elle est vide */
+}
+
+.fixerDivFormulaire:not(:empty) {
+  visibility: visible; /* Afficher la div si elle n'est pas vide */
+}
+
+
+.fixerDivVoyage {
+  position: relative; 
+  top: 300px; 
+  left: 0%; 
+}
+
+.fixerFiltre{
+
+  position: absolute; 
+  top: 100px; 
+  left: -10%; 
+
+}
+
+.fixerDivProfil{
+  position: relative; 
+  top: 300px; 
+  left: 0%; 
+}
+
+.fixerDivPropositionVoyage
+{
+ position: relative; 
+  top: 208px; 
+  left: 25%; 
+}
+
+.filtreEscale 
+{
+  position: absolute; 
+  top: 90px; 
+  left: -15%; 
+}
+
+.card {
+  width: 500px;
+  height: 400px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.123);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition-duration: .5s;
+}
+
+.profileImage {
+  background: rgb(255, 255, 255);
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.textContainer {
+  width: 100%;
+  text-align: center; /* Centrer le texte horizontalement */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 2.1em; /* Ajustement de la taille du texte */
+  color: black;
+  letter-spacing: 0.5px;
+  margin-top: -10px; /* Ajout d'une marge pour séparer du haut */
+}
+
+
+
+
+
+
+
+/*Profil */
+
+.taillePhoto {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0.7%;
+    left: 17.5%;
+    transform: translate(-50%, -50%);
+}
+
+.nomPrenom {
+  position: absolute;
+  justify-content: center;
+  top: -20%;
+  left: 15%;
+  font-size: 2em;
+}
+
+.identifiantUtilisateur {
+  position: absolute;
+  justify-content: center;
+  top: -15%;
+  left: 42%;
+  font-size: 2em;
+}
+
+
+
+
+/* Style sansEscale avec bouton réserver. Utile pour affichier les reservations, les voyages avec et sans escales */
+.sansEscale{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* Couleur de fond blanche */
+  border-radius: 10px; /* Coins arrondis */
+  width: 850px; /* Largeur souhaitée */
+  height: 125px; /* Hauteur souhaitée */
+  position:relative;
+  font-family: Nunito, sans-serif;
+  color : #CE5937 ;
+  box-sizing: border-box;
+  float : left;
+}
+
+.sansEscale:hover {
+  background-color: #f3f3f3; /* Changement de couleur au survol */
+}
+
+.sansEscale::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 1px; /* Épaisseur du trait horizontal */
+    background-color: #f0f0f0; /* Couleur du trait horizontal */
+    z-index: 1; /* Pour placer le trait au-dessus du contenu */
+}
+
+
+.prix
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  top:0%;
+  right :3%;
+  font-weight: bold;
+  color : #CE5937 ;
+}
+
+
+.contrainte
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  bottom: 0%;
+  left: 45%;
+  transform: translateX(-50%);
+  color : #000 ;
+}
+
+.nbrPlaceReservees
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  bottom: 0%;
+  left :72%;
+  transform: translateX(-50%);
+  color : #000 ;
+}
+
+
+.villeDepart{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  top: 0% ;
+  left :2%;
+  color : #000 ;
+}
+
+
+
+.villeArrivee{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+    top: 25% ;
+  left :2%;
+  color : #000 ;
+}
+
+
+.heure
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  bottom: 0%;
+  left: 2%;
+  color : #000 ;
+}
+
+.conducteur
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  bottom: 0%;
+  left: 20%;
+  transform: translateX(-50%);
+  color : #000 ;
+}
+
+
+.nombrePlace
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  top:0%;
+  right :20%;
+  font-weight: bold;
+  color : #CE5937 ;
+}
+
+.reservez
+{
+  font-family: Nunito, sans-serif;
+  position:absolute;
+  top: 65%;
+  right :2.5%;
+  color : #87CEEB ;
+  font-weight: bold;
+
+}
+
+    /* Style pour le bouton submit */
+    input[type="submit"] {
+      background-color: #3498db; /* Couleur de fond du bouton */
+      color: white; /* Couleur du texte du bouton */
+      padding: 10px 20px; /* Espacement intérieur du bouton */
+      border: none; /* Pas de bordure */
+      border-radius: 4px; /* Bordures arrondies */
+      cursor: pointer; /* Curseur pointeur au survol */
+    }
+	
+.proposition 
+{
+  font-family: Nunito, sans-serif;
+  position: relative;
+  font-size: 2.3em;
+  color: #f44336; 
+  font-weight: bold;
+
+}
+
+.mesVoyages 
+{
+  font-family: Nunito, sans-serif;
+  position: relative;
+  font-size: 2.0em;
+  color: #f44336; 
+  font-weight: bold;
+  margin-bottom : 100px ;
+
+}
+
+/* Images accueil */
+
+.fixerImageAccueilA {
+  position: relative;
+  height: 15%;
+  width: 15%;
+}
+
+.greyBackground{
+  background-color : #f0f0f0 ;
+}

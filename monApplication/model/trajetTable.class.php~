@@ -1,0 +1,27 @@
+<?php 
+
+require_once "trajet.class.php";
+
+class trajetTable
+{
+	public static function getTrajet($depart, $arrivee)
+	{
+		$em = dbconnection::getInstance()->getEntityManager() ;//connexion
+
+		$trajetRepository = $em->getRepository('trajet');//base de données trajet
+		$trajet = $trajetRepository->findOneBy(array('depart' => $depart, 'arrivee' => $arrivee));	//Récupération par occurrence en comparant les valeurs des lignes de la bdd par rapports aux arguments
+	
+		//Etape 4 rajout 
+		//Si pas de trajet correspondant alors affiche pas de trajet correspondant
+		if ($trajet == false)
+		{
+			#echo 'Pas de trajet correspondant';
+		}
+		return $trajet; 
+	}
+
+}
+
+
+
+?>
