@@ -8,6 +8,10 @@ Page de connexion
 
 ![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/connexion.png)
 
+Page d'inscription 
+
+![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/inscription.png)
+
 Proposer un voyage 
 
 ![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/propositionVoyage.png)
