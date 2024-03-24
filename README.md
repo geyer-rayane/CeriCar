@@ -2,6 +2,11 @@
 
 CeriCar est une alternative aux sites de covoiturage spécialement conçue pour la faculté d'Avignon.
 
+## Extraits
+
+![Connexion]([images/example.png](https://github.com/geyer-rayane/CeriCar/blob/main/images/connexion.png))
+
+
 ## Description
 
 Le but de ce projet est de développer un site de covoiturage offrant de nombreuses fonctionnalités, dont :
