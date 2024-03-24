@@ -4,7 +4,23 @@ CeriCar est une alternative aux sites de covoiturage spécialement conçue pour 
 
 ## Extraits
 
+Page de connexion 
+
 ![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/connexion.png)
+
+Proposer un voyage 
+
+![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/propositionVoyage.png)
+
+Reserver un voyage 
+
+![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/voyageAvecSansEscale.png)
+
+Profil utilisateur avec voyages en tant que passager et conducteur (si il propose un voyage alors il est conducteur)
+
+![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/voyagePassager.png)
+
+![Connexion](https://github.com/geyer-rayane/CeriCar/blob/main/images/voyageConducteur.png)
 
 
 
